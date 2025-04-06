@@ -1,4 +1,4 @@
-module github.com/fukata/zaico-go/zaico
+module github.com/fukata/zaico-go
 
 go 1.23.7
 
