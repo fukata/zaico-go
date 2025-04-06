@@ -1,4 +1,4 @@
-package zaico 
+package zaico
 
 import (
 	"context"
@@ -20,7 +20,7 @@ func TestInventoryService_List(t *testing.T) {
 			{
 				ID:        1,
 				Title:     "テスト在庫1",
-				Quantity:  10,
+				Quantity:  "10",
 				Unit:      "個",
 				Category:  "テストカテゴリ",
 				State:     "新品",
@@ -79,7 +79,7 @@ func TestInventoryService_ListWithOptions(t *testing.T) {
 			{
 				ID:        1,
 				Title:     "テスト在庫1",
-				Quantity:  10,
+				Quantity:  "10",
 				Unit:      "個",
 				Category:  "テストカテゴリ",
 				State:     "新品",
@@ -124,7 +124,7 @@ func TestInventoryService_Get(t *testing.T) {
 		inventory := Inventory{
 			ID:        1,
 			Title:     "テスト在庫1",
-			Quantity:  10,
+			Quantity:  "10",
 			Unit:      "個",
 			Category:  "テストカテゴリ",
 			State:     "新品",
@@ -168,7 +168,7 @@ func TestInventoryService_Create(t *testing.T) {
 	ctx := context.Background()
 	newInventory := &Inventory{
 		Title:    "テスト在庫1",
-		Quantity: 10,
+		Quantity: "10",
 		Unit:     "個",
 		Category: "テストカテゴリ",
 		State:    "新品",
@@ -205,7 +205,7 @@ func TestInventoryService_Update(t *testing.T) {
 	ctx := context.Background()
 	updateInventory := &Inventory{
 		Title:    "更新された在庫",
-		Quantity: 20,
+		Quantity: "20",
 		Unit:     "個",
 		Category: "テストカテゴリ",
 		State:    "中古",
