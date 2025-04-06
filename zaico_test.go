@@ -1,4 +1,4 @@
-package zaico
+package main 
 
 import (
 	"encoding/json"
