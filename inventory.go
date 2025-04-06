@@ -10,7 +10,7 @@ import (
 type Inventory struct {
 	ID        int     `json:"id"`
 	Title     string  `json:"title"`
-	Quantity  float64 `json:"quantity"`
+	Quantity  string `json:"quantity"`
 	Unit      string  `json:"unit"`
 	Category  string  `json:"category"`
 	State     string  `json:"state"`
