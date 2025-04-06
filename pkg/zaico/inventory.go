@@ -40,7 +40,7 @@ type InventoryService struct {
 
 // List 在庫データの一覧を取得します
 func (s *InventoryService) List(ctx context.Context, opts *InventoryListOptions) ([]Inventory, error) {
-	path := "/inventories"
+	path := "./inventories"
 	if opts != nil {
 		params, err := url.ParseQuery("")
 		if err != nil {
@@ -88,7 +88,7 @@ func (s *InventoryService) List(ctx context.Context, opts *InventoryListOptions)
 
 // Get 在庫データを個別取得します
 func (s *InventoryService) Get(ctx context.Context, id int) (*Inventory, error) {
-	path := fmt.Sprintf("/inventories/%d", id)
+	path := fmt.Sprintf("./inventories/%d", id)
 	req, err := s.client.NewRequest("GET", path, nil)
 	if err != nil {
 		return nil, err
@@ -105,7 +105,7 @@ func (s *InventoryService) Get(ctx context.Context, id int) (*Inventory, error) 
 
 // Create 在庫データを作成します
 func (s *InventoryService) Create(ctx context.Context, inventory *Inventory) (*Inventory, error) {
-	req, err := s.client.NewRequest("POST", "/inventories", inventory)
+	req, err := s.client.NewRequest("POST", "./inventories", inventory)
 	if err != nil {
 		return nil, err
 	}
@@ -121,7 +121,7 @@ func (s *InventoryService) Create(ctx context.Context, inventory *Inventory) (*I
 
 // Update 在庫データを更新します
 func (s *InventoryService) Update(ctx context.Context, id int, inventory *Inventory) (*Inventory, error) {
-	path := fmt.Sprintf("/inventories/%d", id)
+	path := fmt.Sprintf("./inventories/%d", id)
 	req, err := s.client.NewRequest("PUT", path, inventory)
 	if err != nil {
 		return nil, err
@@ -138,7 +138,7 @@ func (s *InventoryService) Update(ctx context.Context, id int, inventory *Invent
 
 // Delete 在庫データを削除します
 func (s *InventoryService) Delete(ctx context.Context, id int) error {
-	path := fmt.Sprintf("/inventories/%d", id)
+	path := fmt.Sprintf("./inventories/%d", id)
 	req, err := s.client.NewRequest("DELETE", path, nil)
 	if err != nil {
 		return err
